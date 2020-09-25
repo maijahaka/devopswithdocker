@@ -1,0 +1,10 @@
+Script started on 2020-09-24 14:01:17+0300
+]0;omistaja@hpelitebook: ~/devopswithdocker/part1omistaja@hpelitebook:~/devopswithdocker/part1$ sudo docker ps -a
+[sudo] omistaja-käyttäjän salasana: 
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;omistaja@hpelitebook: ~/devopswithdocker/part1omistaja@hpelitebook:~/devopswithdocker/part1$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+]0;omistaja@hpelitebook: ~/devopswithdocker/part1omistaja@hpelitebook:~/devopswithdocker/part1$ eci[K[Kxit
+exit
+
+Script done on 2020-09-24 14:01:34+0300

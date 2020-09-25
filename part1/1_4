@@ -1,0 +1,44 @@
+Script started on 2020-09-25 16:44:36+0300
+omistaja@hpelitebook:~/devopswithdocker/part1$ sudo docker run devopsdockeruh/exec_bash_exercise
+[sudo] omistaja-käyttäjän salasana: 
+Unable to find image 'devopsdockeruh/exec_bash_exercise:latest' locally
+latest: Pulling from devopsdockeruh/exec_bash_exercise
+
+...
+
+Status: Downloaded newer image for devopsdockeruh/exec_bash_exercise:latest
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+
+...
+
+In a parallel terminal:
+
+Script started on 2020-09-25 16:50:13+0300
+omistaja@hpelitebook:~$ sudo docker container ls
+[sudo] omistaja-käyttäjän salasana:
+CONTAINER ID        IMAGE                               COMMAND                $
+878f22a82916        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…" $
+40fc767c1bda        ubuntu:16.04                        "sh -c 'while true; …" $
+omistaja@hpelitebook:~$ sudo docker exec -it pensive_chaum bash
+root@878f22a82916:/usr/app# tail -f ./logs.txt
+Fri, 25 Sep 2020 13:50:59 GMT
+Fri, 25 Sep 2020 13:51:02 GMT
+Secret message is:
+"Docker is easy"
+Fri, 25 Sep 2020 13:51:08 GMT
+Fri, 25 Sep 2020 13:51:11 GMT
+Fri, 25 Sep 2020 13:51:14 GMT
+Fri, 25 Sep 2020 13:51:17 GMT
+Secret message is:
+"Docker is easy"
+
+...
+
+read escape sequence
+omistaja@hpelitebook: omistaja@hpelitebook:~$ exit
+exit
+
+Script done on 2020-09-25 16:51:46+0300

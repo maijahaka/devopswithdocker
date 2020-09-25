@@ -1,0 +1,11 @@
+Script started on 2020-09-24 13:53:50+0300
+]0;omistaja@hpelitebook: ~/devopswithdocker/part1omistaja@hpelitebook:~/devopswithdocker/part1$ exitsudo docker ps -aexit[Ksudo docker ps -a
+[sudo] omistaja-käyttäjän salasana: 
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+3786d537b58c        nginx               "/docker-entrypoint.…"   18 minutes ago      Exited (0) 18 minutes ago                       stoic_mirzakhani
+1e7a766a2f5b        nginx               "/docker-entrypoint.…"   18 minutes ago      Exited (0) 17 minutes ago                       zealous_herschel
+8d25f203c3fc        nginx               "/docker-entrypoint.…"   19 minutes ago      Up 19 minutes               80/tcp              ecstatic_cohen
+]0;omistaja@hpelitebook: ~/devopswithdocker/part1omistaja@hpelitebook:~/devopswithdocker/part1$ exit
+exit
+
+Script done on 2020-09-24 13:54:13+0300
