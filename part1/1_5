@@ -1,0 +1,32 @@
+Starting a ubuntu image:
+$ sudo docker run -it --name website ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching..."; sleep 1; curl http://$website;'
+
+Attempting to execute:
+Input website:
+helsinki.fi
+Searching...
+sh: 1: curl: not found
+
+Entering the container to install curl:
+$ sudo docker exec -it website bash
+root@d41b6d5cbfe1:/# apt update
+...
+root@d41b6d5cbfe1:/# apt upgrade
+...
+root@d41b6d5cbfe1:/# apt install curl
+...
+root@d41b6d5cbfe1:/# exit
+
+Attempting to execute again:
+$ sudo docker start -ia website
+Input website:
+helsinki.fi
+Searching...
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
