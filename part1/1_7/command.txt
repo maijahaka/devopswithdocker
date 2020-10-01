@@ -1,0 +1,2 @@
+Command used to run the container:
+$sudo docker run -it curler
