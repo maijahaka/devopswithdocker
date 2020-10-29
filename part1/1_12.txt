@@ -1,0 +1,5 @@
+Commands used:
+$ sudo docker run -d -p 5000:5000 frontend-example
+$ sudo docker run -d -p 8000:8000 backend-example
+
+Edited Dockerfiles are in folders 1_10 and 1_11.

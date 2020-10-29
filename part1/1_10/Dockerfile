@@ -8,4 +8,5 @@ RUN apt install -y nodejs
 RUN node -v && npm -v
 WORKDIR /frontend-example-docker
 RUN npm install
+ENV API_URL=http://localhost:8000
 CMD ["npm", "start"]
