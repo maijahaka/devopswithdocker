@@ -1,0 +1,10 @@
+Commands used:
+$ git clone https://github.com/docker-hy/scaling-exercise
+$ cd scaling-exercise/
+$ docker-compose up -d
+
+The tests were not passed!
+
+$ docker-compose up -d --scale compute=2
+
+Now the tests were passed!
