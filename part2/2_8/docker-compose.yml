@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+  frontend:
+    build: ./frontend
+    ports:
+      - "5000:5000"
+    container_name: frontend
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS=redis
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_HOST=db
+    depends_on: 
+      - db
+    container_name: backend
+  redis:
+    image: "redis:alpine"
+  db:
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: example
+
+volumes:
+  nginx:
