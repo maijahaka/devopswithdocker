@@ -1,0 +1,5 @@
+GitHub repository with modified CircleCI config and Dockerfile:
+https://github.com/maijahaka/devopswithdocker-part-3
+
+App on Heroku:
+https://devopswithdocker-part-3.herokuapp.com
